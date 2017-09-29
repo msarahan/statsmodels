@@ -16,11 +16,16 @@ env:
     - DOCBUILD=false
 
 matrix:
-  fast_finish: true
   include:
   - python: 2.7
     env:
     - PYTHON=2.7
+    - NUMPY=1.11
+    - MATPLOTLIB=1.5
+    - COVERAGE=true
+  - python: 2.7
+    env:
+    - PYTHON=3.6
     - NUMPY=1.11
     - MATPLOTLIB=1.5
     - COVERAGE=true
@@ -35,6 +40,7 @@ before_install:
   - ./miniconda.sh -b
   - export PATH=/home/travis/miniconda/bin:$PATH
   - export PATH=/home/travis/miniconda2/bin:$PATH
+  - export PATH=/home/travis/miniconda3/bin:$PATH
   - export MKL_NUM_THREADS=1
   - export NUMEXPR_NUM_THREADS=1
   - export OMP_NUM_THREADS=1
