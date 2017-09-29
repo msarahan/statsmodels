@@ -26,6 +26,13 @@ matrix:
     - COVERAGE=true
   - python: 2.7
     env:
+    - PYTHON=2.7.13
+    - PYTHON_MAJOR=3
+    - NUMPY=1.11
+    - MATPLOTLIB=1.5
+    - COVERAGE=true
+  - python: 2.7
+    env:
     - PYTHON=3.5
     - PYTHON_MAJOR=3
     - NUMPY=1.11
